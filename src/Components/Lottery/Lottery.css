@@ -1,0 +1,10 @@
+@import "./../../index.css";
+
+
+.lotteryContainer{
+    background-color:  var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}

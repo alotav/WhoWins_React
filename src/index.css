@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root{
+  --blue: #516091;
+  --lightBlue: #74BEC1;
+  --green: #ADEBBE;
+  --yellow: #EEF3AD;
+
+  font-family: 'Itim', cursive;  ;
+}
+body{
+  margin: 0 0 5em 0;
+  background-color: var(--lightBlue);
+}

@@ -1,0 +1,8 @@
+@import "./../../index.css";
+
+.aboutUsContainer{
+    background-color: var(--green);
+    width: 50%;
+    height: auto;
+    padding: 3em;
+}
