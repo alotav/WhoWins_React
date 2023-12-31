@@ -4,7 +4,9 @@
   --blue: #516091;
   --lightBlue: #74BEC1;
   --green: #ADEBBE;
-  --yellow: #EEF3AD;
+  --yellow: rgb(238, 243, 173);
+  --yellow2: rgb(242, 243, 223);
+  --yellow3: rgb(218, 222, 142);
 
   font-family: 'Itim', cursive;  ;
 }
