@@ -9,7 +9,13 @@
   overflow: hidden;
 }
 
-.howItWorksContainer h1,
+.howItWorksContainer h1{
+  background-color: var(--green);
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+  margin: 2em;
+}
 .message1,
 .message2,
 .message3 {
@@ -19,6 +25,7 @@
   box-shadow: 2px 2px 10px black;
   margin: 1em;
 }
+
 
 .message1,
 .message2,

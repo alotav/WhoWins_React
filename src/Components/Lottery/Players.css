@@ -1,38 +1,37 @@
 @import "./../../index.css";
 
 .playersContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--yellow);
-  border-radius: .5em;
+  border-radius: 0.5em;
   padding: 1em;
   box-shadow: 2px 2px 10px black;
 }
-.playersContainer textarea{
-    width: 100%;
-    resize: none;
-    border-radius: .5em;
-    background-color: var(--yellow);
+.playersContainer textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 0.5em;
+  background-color: var(--yellow);
 }
 
-.playersContainer textarea::-webkit-scrollbar{
-    background-color: var(--yellow2);
-    border-radius: 5px;
+.playersContainer textarea::-webkit-scrollbar {
+  background-color: var(--yellow2);
+  border-radius: 5px;
 }
-.playersContainer textarea::-webkit-scrollbar-thumb{
-    background-color: var(--yellow3);
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-
-
-.playersContainer ul{
-    padding: 0;
-    list-style: none;
+.playersContainer textarea::-webkit-scrollbar-thumb {
+  background-color: var(--yellow3);
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 
-.lotteryBtn{
-    width: 25%;
+.playersContainer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.lotteryBtn {
+  width: 25%;
 }

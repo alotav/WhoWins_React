@@ -1,8 +1,9 @@
 import "./Players.css";
 
-const Players = () => {
+// eslint-disable-next-line react/prop-types
+const Players = ({className}) => {
   return (
-    <div className="playersContainer">
+    <div className={`playersContainer ${className}`}>
       <h3>Instrucciones</h3>
       <p>Ingres los nombres de los participantes separados por coma.</p>
       <p>Haga click en &quot;Sortear!&quot; y espere el resultado.</p>

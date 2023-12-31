@@ -3,6 +3,7 @@ import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <div className="aboutUsContainer">
+      <h1>Who Wins?</h1>
       <p>
         WhoWins es tu plataforma confiable para organizar sorteos de manera
         sencilla y transparente. Con solo unos clics, puedes crear sorteos
