@@ -1,7 +1,15 @@
 import "./Players.css";
+import { useRef } from "react";
 
 // eslint-disable-next-line react/prop-types
-const Players = ({className}) => {
+const Players = ({ className }) => {
+  
+  const players = useRef("");
+  
+  const handleInput = () => {
+    console.log(players.current.value);
+  };
+
   return (
     <div className={`playersContainer ${className}`}>
       <h3>Instrucciones</h3>
@@ -13,8 +21,9 @@ const Players = ({className}) => {
         cols="30"
         rows="10"
         placeholder="Ingrese participantes"
+        ref={players}
+        onInput={handleInput}
       />
-      
     </div>
   );
 };

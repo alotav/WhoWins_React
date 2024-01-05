@@ -10,11 +10,15 @@
   padding: 1em;
   box-shadow: 2px 2px 10px black;
 }
+.playersContainer p{
+  margin: 0;
+}
 .playersContainer textarea {
   width: 100%;
   resize: none;
+  margin-top: 1em;
   border-radius: 0.5em;
-  background-color: var(--yellow);
+  background-color: var(--yellow2);
 }
 
 .playersContainer textarea::-webkit-scrollbar {
@@ -32,6 +36,4 @@
   list-style: none;
 }
 
-.lotteryBtn {
-  width: 25%;
-}
+

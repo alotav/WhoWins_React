@@ -14,3 +14,16 @@ body{
   margin: 0 0 5em 0;
   background-color: var(--lightBlue);
 }
+
+/* Effects */
+.message{
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all .5s;
+}
+
+.show{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .5s;
+}

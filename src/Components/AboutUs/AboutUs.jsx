@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react";
 import "./AboutUs.css";
 
 const AboutUs = () => {
+  const [showTitle, setShowTitle] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+
+  useEffect(() => {
+    const timerShowTitle = setTimeout(() => {
+      setShowTitle(true);
+    }, 100);
+    const timerShowMessage = setTimeout(() => {
+      setShowMessage(true);
+    }, 200);
+
+    return () => clearTimeout(timerShowTitle, timerShowMessage)
+  });
+
   return (
     <div className="aboutUsContainer">
-      <h1>Who Wins?</h1>
-      <p>
+      <h1 className={`${showTitle ? "show" : "message"}`}>Who Wins?</h1>
+      <p className={`${showMessage ? "show" : "message"}`}>
         WhoWins es tu plataforma confiable para organizar sorteos de manera
         sencilla y transparente. Con solo unos clics, puedes crear sorteos
         emocionantes y darle a tus amigos, familiares o seguidores la

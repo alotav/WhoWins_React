@@ -12,6 +12,9 @@ const HowItWorks = () => {
   const [showMessage3, setShowMessage3] = useState(false);
 
   useEffect(() => {
+    const titleTimer = setTimeout(() => {
+      setShowTitle(true);
+    }, 100);
     const message1Timer = setTimeout(() => {
       setShowMessage1(true);
     }, 200);
@@ -21,9 +24,7 @@ const HowItWorks = () => {
     const message3Timer = setTimeout(() => {
       setShowMessage3(true);
     }, 400);
-    const titleTimer = setTimeout(() => {
-      setShowTitle(true);
-    }, 100);
+
     return () => clearTimeout(message1Timer, titleTimer);
   }, []);
 
