@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Nav from "./Components/Nav/Nav";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import HowItWorks from "./Components/HowItWorks/HowItWorks";
@@ -17,7 +18,7 @@ const App = () => {
           <Route path="/lottery" element={<Lottery />} />
         </Routes>
       </BrowserRouter>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
