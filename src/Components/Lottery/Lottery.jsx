@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./Lottery.css";
 import Players from "./Players";
 import LotteryContext from "./../../Context/LotteryContext.jsx";
+import Celebration from "./Celebration.jsx";
 
 const Lottery = () => {
   const [showTitle, setShowTitle] = useState(false);
@@ -26,14 +27,13 @@ const Lottery = () => {
   const createRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
+
   const getWinner = () => {
     let winnerNumber = createRandom(0, finalPlayersList.length -1)
     let rdmWinner = finalPlayersList[winnerNumber];
     console.log(`Ganador: ${rdmWinner}`)
     console.log(winnerNumber)
     console.log(typeof(finalPlayersList))
-    // setWinner(rdmWinner);
-    // console.log(winner)
   };
 
   useEffect(() => {
@@ -69,6 +69,7 @@ const Lottery = () => {
       }}
     >
       <div className="lotteryContainer">
+        <Celebration/>
         <button
           className={`newLotteryBtn ${showTitle ? "show" : "message"}`}
           onClick={fnShowAddPlayers}
