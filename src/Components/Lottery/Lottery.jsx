@@ -8,9 +8,9 @@ const Lottery = () => {
   const [showTitle, setShowTitle] = useState(false);
   const [showAddPlayers, setShowAddPlayers] = useState(false);
   const [showBtnLottery, setBtnLottery] = useState(false);
-
   // const [players, setPlayers] = useState()
   const [playersListedOk, setPlayersListedOk] = useState(false);
+  const [finalPlayersList, setFinalPlayersList] = useState([]);
   const [winner, setWinner] = useState("");
 
   const fnPlayersListedOk = (bool) => {
@@ -22,9 +22,23 @@ const Lottery = () => {
     console.log(`Listado de jugadores: ${playersListedOk}`);
   };
 
-  const fmWinnerName = (name) => {
-    console.log(name);
+  // create random int
+  const createRandom = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   };
+  const getWinner = () => {
+    let winnerNumber = createRandom(0, finalPlayersList.length -1)
+    let rdmWinner = finalPlayersList[winnerNumber];
+    console.log(`Ganador: ${rdmWinner}`)
+    console.log(winnerNumber)
+    console.log(typeof(finalPlayersList))
+    // setWinner(rdmWinner);
+    // console.log(winner)
+  };
+
+  useEffect(() => {
+    console.log(`Lista Final: ${finalPlayersList}`);
+  }, [finalPlayersList]);
 
   const fnShowAddPlayers = () => {
     const addPlayersTimer = setTimeout(() => {
@@ -45,7 +59,15 @@ const Lottery = () => {
   }, []);
 
   return (
-    <LotteryContext.Provider value={{ fnPlayersListedOk, fmWinnerName, playersListedOk }}>
+    <LotteryContext.Provider
+      value={{
+        fnPlayersListedOk,
+        playersListedOk,
+        setWinner,
+        setFinalPlayersList,
+        finalPlayersList
+      }}
+    >
       <div className="lotteryContainer">
         <button
           className={`newLotteryBtn ${showTitle ? "show" : "message"}`}
@@ -56,8 +78,12 @@ const Lottery = () => {
 
         <Players className={`${showAddPlayers ? "show" : "message"}`} />
 
-        <button type="submit" className={`lotteryBtn ${showBtnLottery ? "show" : "message"}`} 
-        disabled = {!playersListedOk}>
+        <button
+          type="submit"
+          className={`lotteryBtn ${showBtnLottery ? "show" : "message"}`}
+          disabled={!playersListedOk}
+          onClick={getWinner}
+        >
           <h3>Sortear!</h3>
         </button>
       </div>

@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
 import "./Players.css";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import LotteryContext from "../../Context/LotteryContext";
 
 // eslint-disable-next-line react/prop-types
 const Players = ({ className }) => {
   const players = useRef("");
 
-  const { fmWinnerName, fnPlayersListedOk, playersListedOk } = useContext(LotteryContext);
+  const { fnPlayersListedOk, playersListedOk, setFinalPlayersList, finalPlayersList } =
+    useContext(LotteryContext);
+  let { setWinner } = useContext(LotteryContext);
 
   const handleInput = () => {
     // console.log(players.current.value);
@@ -15,15 +17,19 @@ const Players = ({ className }) => {
     playersList = playersList.split(",").map((nombre) => {
       // verificacion para nombre < 2 caracteres y cadena de espacios
       if (nombre.length < 2 || nombre.trim().length === 0) {
-        fnPlayersListedOk(false)
-        console.log(`Hay un error con el nombre`)
-      }else{
-        fnPlayersListedOk(true)
-        return nombre.trim()
+        fnPlayersListedOk(false);
+        console.log(`Hay un error con el nombre`);
+      } else {
+        fnPlayersListedOk(true);
+        return nombre.trim();
       }
     });
-    console.log(playersList);
+    console.log(`Lista: ${playersList}`);
+    setFinalPlayersList(playersList);
+    console.log(finalPlayersList)
   };
+
+  
 
   return (
     <div className={`playersContainer ${className}`}>
@@ -35,7 +41,7 @@ const Players = ({ className }) => {
         id="players"
         cols="30"
         rows="10"
-        spellCheck= "false"
+        spellCheck="false"
         placeholder="Ingrese participantes"
         ref={players}
         onInput={handleInput}
