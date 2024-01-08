@@ -4,6 +4,7 @@ import "./Lottery.css";
 import Players from "./Players";
 import LotteryContext from "./../../Context/LotteryContext.jsx";
 import Celebration from "./Celebration.jsx";
+import ShowWinner from "./ShowWinner.jsx";
 
 const Lottery = () => {
   const [showTitle, setShowTitle] = useState(false);
@@ -29,16 +30,19 @@ const Lottery = () => {
   };
 
   const getWinner = () => {
-    let winnerNumber = createRandom(0, finalPlayersList.length -1)
+    let winnerNumber = createRandom(0, finalPlayersList.length - 1);
     let rdmWinner = finalPlayersList[winnerNumber];
-    console.log(`Ganador: ${rdmWinner}`)
-    console.log(winnerNumber)
-    console.log(typeof(finalPlayersList))
+    console.log(`Ganador: ${rdmWinner}`);
+    setWinner(rdmWinner);
+    console.log(winnerNumber);
+    console.log(typeof finalPlayersList);
   };
 
+  // imprimimos valores actualizados de las variables finalPlayersList, winner
   useEffect(() => {
     console.log(`Lista Final: ${finalPlayersList}`);
-  }, [finalPlayersList]);
+    console.log(`setWinner: ${winner}`);
+  }, [finalPlayersList, winner]);
 
   const fnShowAddPlayers = () => {
     const addPlayersTimer = setTimeout(() => {
@@ -65,11 +69,16 @@ const Lottery = () => {
         playersListedOk,
         setWinner,
         setFinalPlayersList,
-        finalPlayersList
+        finalPlayersList,
       }}
     >
       <div className="lotteryContainer">
-        <Celebration/>
+        {winner && (
+          <>
+            <Celebration />
+            <ShowWinner winName={winner} />
+          </>
+        )}
         <button
           className={`newLotteryBtn ${showTitle ? "show" : "message"}`}
           onClick={fnShowAddPlayers}

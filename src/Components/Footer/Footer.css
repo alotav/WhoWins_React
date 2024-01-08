@@ -9,6 +9,7 @@
   margin-top: 2em;
   box-shadow: -0px -2px 5px var(--blue);
   position: fixed;
+  z-index: 2;
   bottom: 0;
   width: 100%;
 }

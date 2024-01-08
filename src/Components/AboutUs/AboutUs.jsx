@@ -21,8 +21,7 @@ const AboutUs = () => {
       <h1 className={`${showTitle ? "show" : "message"}`}>Who Wins?</h1>
       <p className={`${showMessage ? "show" : "message"}`}>
         WhoWins es tu plataforma confiable para organizar sorteos de manera
-        sencilla y transparente. Con solo unos clics, puedes crear sorteos
-        emocionantes y darle a tus amigos, familiares o seguidores la
+        sencilla. Con solo unos clics, puedes crear sorteos y darle a tus amigos, familiares o seguidores la
         oportunidad de ganar premios increíbles.
       </p>
     </div>

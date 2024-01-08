@@ -6,9 +6,7 @@ const Message1 = ({className}) => {
     <div className={`message1 ${className}`}>
       <h3>1. Ve a la Sección &quot;Realizar Sorteo&quot;</h3>
       <p>
-        Dirígete a la intuitiva sección &quot;Realizar Sorteo&quot; en la
-        plataforma WhoWins. Allí encontrarás todas las herramientas que
-        necesitas para crear una experiencia única para tus participantes.
+        Dirígete a la sección &quot;Realizar Sorteo&quot;, allí encontrarás todas las herramientas que necesitas para crear una experiencia única para tus participantes.
       </p>
     </div>
   );

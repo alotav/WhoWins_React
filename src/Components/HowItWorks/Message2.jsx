@@ -4,9 +4,7 @@ const Message2 = ({className}) => {
     <div className={`message2 ${className}`}>
       <h3>2. Completa los Campos para Ingresar Participantes</h3>
       <p>
-        Llena los campos proporcionados con la información de tus participantes.
-        Puedes personalizar los detalles según tus preferencias, asegurándote de
-        que cada sorteo sea único y especial.
+        Llena el campo proporcionado con la información de tus participantes siguiendo las indicaciones.
       </p>
     </div>
   );
