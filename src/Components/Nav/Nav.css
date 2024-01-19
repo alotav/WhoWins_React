@@ -35,19 +35,22 @@ img{
     /* border-radius: 5px; */
 }
 
-.navContainer .fa-bars{
+.navContainer button{
     display: none;
 }
 
 @media screen and (width < 650px) {
-    .navContainer ul {
+    .navContainer .navMenu {
         display: none;
     }
-    .navContainer .fa-bars{
+    .navContainer button{
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 2em;
+        background-color: var(--blue);
+        border: none;
+        cursor: pointer;
         color: white;
         position: relative;
         right: 1em;
