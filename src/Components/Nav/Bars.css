@@ -1,0 +1,44 @@
+@import "./../../index.css";
+
+.barsContainer{
+    position: fixed;
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    flex-flow: column;
+}
+
+.barsContainer ul{
+    background-color: var(--blue);
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+.barsContainer ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+.barsContainer a{
+    text-decoration: none;
+    color: inherit;
+    padding: 0%;
+    color: aliceblue;
+    font-size:x-large;
+}
+.barsContainer ul a:hover{
+    cursor: pointer;
+    border: 1px solid;
+}
+
+
+.fa-angles-right{
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 1em;
+    right: 2em;
+}

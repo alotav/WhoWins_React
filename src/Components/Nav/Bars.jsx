@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import logo from "./img/whowinsimg.png";
-import "./Nav.css";
+import "./Bars.css";
 
-const Nav = () => {
+const Bars = () => {
   return (
-    <div className="navContainer">
-      <img src={logo} alt="logo" />
-      <i className="fa-solid fa-bars"></i>
+    <div className="barsContainer">
+      <i className="fa-solid fa-angles-right"></i>
       <ul>
         <Link to={"/"}>
           <li>Como funciona?</li>
@@ -22,4 +20,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Bars;

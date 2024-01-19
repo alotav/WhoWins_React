@@ -6,11 +6,13 @@ import Lottery from "./Components/Lottery/Lottery";
 import Footer from "./Components/Footer/Footer";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Bars from "./Components/Nav/Bars";
 
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+        {/* <Bars /> */}
         <Nav />
         <Routes>
           <Route path="/" element={<HowItWorks />} />
