@@ -21,7 +21,7 @@ const Lottery = () => {
     } else {
       setPlayersListedOk(false);
     }
-    console.log(`Listado de jugadores: ${playersListedOk}`);
+    // console.log(`Listado de jugadores: ${playersListedOk}`);
   };
 
   // create random int

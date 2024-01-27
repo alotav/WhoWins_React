@@ -18,15 +18,15 @@ const Players = ({ className }) => {
       // verificacion para nombre < 2 caracteres y cadena de espacios
       if (nombre.length < 2 || nombre.trim().length === 0) {
         fnPlayersListedOk(false);
-        console.log(`Hay un error con el nombre`);
+        // console.log(`Hay un error con el nombre`);
       } else {
         fnPlayersListedOk(true);
         return nombre.trim();
       }
     });
-    console.log(`Lista: ${playersList}`);
+    // console.log(`Lista: ${playersList}`);
     setFinalPlayersList(playersList);
-    console.log(finalPlayersList)
+    // console.log(finalPlayersList)
   };
 
   
