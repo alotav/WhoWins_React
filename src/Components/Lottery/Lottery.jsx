@@ -32,16 +32,16 @@ const Lottery = () => {
   const getWinner = () => {
     let winnerNumber = createRandom(0, finalPlayersList.length - 1);
     let rdmWinner = finalPlayersList[winnerNumber];
-    console.log(`Ganador: ${rdmWinner}`);
+    // console.log(`Ganador: ${rdmWinner}`);
     setWinner(rdmWinner);
-    console.log(winnerNumber);
-    console.log(typeof finalPlayersList);
+    // console.log(winnerNumber);
+    // console.log(typeof finalPlayersList);
   };
 
   // imprimimos valores actualizados de las variables finalPlayersList, winner
   useEffect(() => {
-    console.log(`Lista Final: ${finalPlayersList}`);
-    console.log(`setWinner: ${winner}`);
+    // console.log(`Lista Final: ${finalPlayersList}`);
+    // console.log(`setWinner: ${winner}`);
   }, [finalPlayersList, winner]);
 
   const fnShowAddPlayers = () => {

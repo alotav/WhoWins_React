@@ -7,7 +7,7 @@ const Celebration = () => {
   const [active, setActive] = useState(false);
 
   const handleConfeti = () => {
-    console.log("Lanzando confeti...");
+    // console.log("Lanzando confeti...");
     const timer = setInterval(() => {
       setActive(true);
 
